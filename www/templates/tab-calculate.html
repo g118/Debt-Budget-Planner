@@ -1,0 +1,64 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/controller.js"></script>
+<ion-view view-title="Calculate">
+  <ion-content class="padding">
+    <ion-list>
+      <div ng-controller="CalculateCtrl">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Credit Card 1">
+          <br>
+          <input type="number" placeholder="Balance">
+          <input type="number" ng-model="minpaycc1" placeholder="Min Payment">
+          <input type="number" ng-model="roicc1" placeholder="ROI">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Credit card 2">
+          <br>
+          <input type="number" placeholder="Balance">
+          <input type="number" ng-model="minpaycc2" placeholder="Min Payment">
+          <input type="number" ng-model="roicc2" placeholder="ROI">
+        </label>
+         <label class="item item-input">
+          <input type="text" placeholder="Car Loan">
+          <br>
+          <input type="number" placeholder="Balance">
+          <input type="number" ng-model="minpaycl" placeholder="Min Payment">
+          <input type="number" ng-model="roicl" placeholder="ROI">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Enter Extra Cash for this month -></span>
+          <input type="number" ng-model="extracash">
+        </label>
+        <div class="padding">
+          <button class="button button-block button-assertive" ng-click="Calculate(minpaycc1,minpaycc2,minpaycl,extracash,roicc1,roicc2,roicl,minAmtCC1,minAmtCC2,minAmtcl)">Plan Debt Payments</button>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Payment Towards Credit card 1 -> </span>
+          <br>
+          <label name="Creditcard1" ng-bind="minAmtCC1" id="cc1">
+
+        </label>
+        </label>
+     <br>
+      <label class="item item-input">
+          <span class="input-label">Payment Towards Credit card 2 -> </span>
+          <br>
+          <label name="Creditcard1" ng-bind="minAmtCC2" id="cc1">
+
+        </label>
+        </label>
+         <br>
+      <label class="item item-input">
+          <span class="input-label">Payment Towards Car Loan -> </span>
+          <br>
+          <label name="Creditcard1" ng-bind="minAmtcl" id="cc1">
+
+        </label>
+        </label>
+      </div>
+      </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
